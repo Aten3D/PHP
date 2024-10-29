@@ -48,11 +48,17 @@ function listado($inf,$sup) {
 	$i=$array[0];
 	$fin=$array[1];
 	for($i;$i<=$fin;$i++){
-		print("$i ");
+		if (esPrimo($i)) echo "$i es primo";
 	}
 	echo("<br>\n");
 }
 
+function esPrimo($i){
+	for ($x=2;$x<$i;$x++) {
+		if($i % $x == 0) return false;
+	}
+	return true;
+}
 // 2.5 puntos
 // Debe mostrar en pantalla del número menor elevado al mayor
 // Condición: hacer uso de bucle while
