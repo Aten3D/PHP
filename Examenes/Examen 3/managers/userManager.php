@@ -46,7 +46,6 @@ switch ($op) {
         try {
             mysqli_query($link, $query);
          } catch (Exception $e) {
-            echo "cagaste";
          } finally {
              $numRows = mysqli_affected_rows($link);
              mysqli_close($link);
